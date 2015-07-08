@@ -27,7 +27,7 @@ dirs.each do |dir|
   name = dir.split("/").last
   names << name
   data[name] = {}
-  File.open("#{name}//results.xprs").each_with_index do |l, i|
+  File.open("#{dir}/results.xprs").each_with_index do |l, i|
     next if i == 0
     a = l.chomp.split(/\t/, -1)
     id = a[1]
